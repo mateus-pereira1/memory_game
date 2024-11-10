@@ -26,7 +26,6 @@ body{
     padding: 40px 60px;
     width: 700px;
     
-    
 }
 
 h2{
@@ -76,7 +75,6 @@ h2{
     perspective: 500px;
     justify-content: center;
     align-items: center;
-    background-color: #f2f2f2;
     
 }
 
@@ -90,9 +88,7 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f2f2f2;
     margin-right: 15px;
-    
     
     
 }
@@ -107,7 +103,7 @@ h2{
     backface-visibility: hidden;
     border-radius: 10px;
     border: 3px solid #F1BB00;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.445);
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.445);
     
     
     
