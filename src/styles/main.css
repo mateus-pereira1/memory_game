@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    font-family: "Press Start 2P", cursive;    
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f2f2f2;
+    user-select: none;
+}
+
+
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-radius: 30px;
+    border: 3px solid #F1BB00;
+    padding: 40px 60px;
+    width: 700px;
+    
+}
+
+h2{
+    font-size: 2em;
+    color: #fff;
+    background-color: #669a1e;
+    border-radius: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: auto;
+    font-weight: 600;
+    padding: 15px 20px;
+    
+}
+
+.reset{
+    padding: 15px 20px;
+    width: 100%;
+    color: #fff;
+    background-color: #fff;
+    border: none;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #669a1e;
+    border-radius: 15px;
+}
+
+.reset:focus
+{
+    color: #fff;
+    background-color: #F1BB00;
+}
+
+.game{
+    width: 430px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.item{
+    font-size: 3em;
+    transform: rotateY(180deg);
+    transition: 0.25s;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    margin-right: 15px;
+    
+    
+}
+
+.item::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #f2e18d;
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+    border-radius: 10px;
+    border: 3px solid #F1BB00;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.445);
+    
+    
+    
+}
+
+.item.boxOpen{
+    transform: rotateY(0deg);
+    border: 3px solid #F1BB00;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.445);
+}
+
+.boxOpen::after,
+.boxMatch::after{
+    transform: rotateY(180deg);
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%; 
+        padding: 20px 40px;
+    }
+
+    h2 {
+        font-size: 2.5em;
+        width: 100%; 
+    }
+
+    .game {
+        width: 350px;
+        height: 350px;
+    }
+
+    .item {
+        width: 70px;
+        height: 70px;
+        font-size: 2.5em; 
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 15px 20px;
+    }
+
+    h2 {
+        font-size: 1.2em;
+        width: 100%; 
+    }
+
+    .reset {
+        font-size: 1.2em; 
+    }
+
+    .game {
+        width: 300px; 
+        height: 400px;
+    }
+
+    .item {
+        width: 60px;
+        height: 60px;
+        font-size: 2em; 
+    }
+}
